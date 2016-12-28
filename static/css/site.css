@@ -1,0 +1,50 @@
+
+        /*the right side content block position*/
+        /*transition at 0.4 seconds so the side bar disappears slowly on desktop when window is sized down
+        include mozilla and webkit transition in case viewed in an older browser*/
+        .container {
+            width:100%;
+        }
+
+
+        .body-content{
+            margin-left: 13em;
+            margin-top: 2.0em;
+            width: 85%;
+            transition: margin-left 0.4s linear;
+            -moz-transition: margin-left 0.4s linear;
+            -webkit-transition: margin-left 0.4s linear;
+        }
+
+        .main-title{
+            padding: 0.7em;
+            background-color: #1b6d85;
+            color: white;
+            font-size: x-large;
+
+        }
+        /*top banner text anchor wording*/
+        .main-title a{
+            background-color: #1b6d85;
+            color: white;
+            text-decoration: none;
+        }
+        .main-title a:hover{
+            text-decoration: none;
+        }
+        /*takes all transition away and override what's there*/
+        .notransition *{
+            -webkit-transition: none !important;
+            -moz-transition: none !important;
+            -o-transition: none !important;
+            transition: none !important;
+        }
+
+/* ==========================================================================
+   geoTrack's user message styles
+========================================================================== */
+
+.messageUser{
+    color: #ee5f5b;
+
+}

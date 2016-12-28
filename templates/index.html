@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}
+Clean-Up Demo Index
+{% endblock %}
+
+{% block content %}
+<div class="col-xs-10 col-lg-12"></div>
+    <article>
+        <header>
+            <h3>Clean Up Demo App</h3>
+            <p>An app for reporting clean-up locations</p>
+        </header>
+        <br>
+        <section>
+            <h3>Mobile operations:</h3>
+            <p><i class="glyphicon glyphicon-home visible-xs visible-sm visible-md visible-lg"></i> = return Home</p>
+            <p><i class="glyphicon glyphicon-user visible-xs visible-sm visible-md visible-lg"></i> = login or sign up</p>
+            <p><i class="glyphicon glyphicon-remove-circle visible-xs visible-sm visible-md visible-lg"></i> = logout</p>
+            <p><i class="glyphicon glyphicon-globe visible-xs visible-sm visible-md visible-lg"></i>  = start location tracking and upload photo</p>
+            <p><i class="glyphicon glyphicon-cloud-download visible-xs visible-sm visible-md visible-lg"></i> = view all location reports </p>
+            <p><i class="glyphicon glyphicon-floppy-saved visible-xs visible-sm visible-md visible-lg"></i> = view your image uploads </p>
+        </section>
+    </article>
+{% endblock %}

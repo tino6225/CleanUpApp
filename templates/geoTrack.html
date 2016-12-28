@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block title %}
+GeoTrack
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<div class="bs-docs-section">
+    <div class="row">
+        <div class="col-xs-10 col-lg-12">
+            <div class="header-title">
+                <h5>*if you wish to restart, press the "Globe" icon anytime</h5>
+            </div>
+            <form>
+                <button class="btn btn-info" id="btn1">Start Geolocation</button>
+                <button class="btn btn-danger" id="btn2">End Tracking</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <div class="row">
+        <div class="col-xs-12 col-lg-8">
+            <div class="well bs-component">
+                <form id="htmlTrackingForm" class="form-horizontal" method="post" action="">
+                    <fieldset>
+                        <legend>Track & Report</legend>
+                        <div class="form-group has-success">
+                            <label for="forCoordinates" class="col-lg-2 control-label">Coords(lat,lng)</label>
+                            <div class="col-lg-5">
+                                <textarea name="coordinates" class="form-control" rows="2" id="idCoordinates" placeholder="Coordinates will display here" required></textarea>
+                            </div>
+                         </div>
+
+                        <div class="form-group has-success">
+                            <label for="forComments" class="col-lg-2 control-label">Comments</label>
+                            <div class="col-lg-5">
+                                <textarea name="comments" class="form-control" rows="2" maxlength="50" id="idComments" placeholder="Up to 50 chars" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group has-success">
+                            <label for="forZipCode" class="col-lg-2 control-label">ZipCode</label>
+                            <div class="col-lg-5">
+                                <textarea name="zipCode" class="form-control" rows="1" maxlength="5" id="idZipcode" placeholder="Enter the zipcode" required></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+                <form>
+                    <button class="btn btn-success" id="btn3" type="button" >Save Record First</button>
+                </form>
+
+                <div class="messageUser" id="result"></div>
+
+                <div>
+                    <form class="form-horizontal" action="/image" >
+                        <fieldset>
+                        <legend>Image</legend>
+                        <div class="form-group has-success">
+                            <div class="col-lg-5">
+                                <button class="btn btn-success" id="btn4" type="submit">Upload Image</button>
+                            </div>
+                        </div>
+                        </fieldset>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

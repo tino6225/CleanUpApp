@@ -1,0 +1,88 @@
+
+
+        /*Left navigation bar's background color and position, removing bullet pts and underlines*/
+        .sidebar-wrapper{
+            position: absolute;
+            top: 4.8em;
+            left: 0em;
+            width: 12em;
+            height: 100%;
+            background-color: #1c1e22;
+            transition: left 0.4s linear;
+            -moz-transition: left 0.4s linear;
+            -webkit-transition: left 0.4s linear;
+        }
+        .sidebar-wrapper ul{
+            width: 11em;
+            list-style: none;
+            margin-top: 2em;
+            margin-left: 1em;
+            padding: 0em;
+        }
+        .sidebar-wrapper ul li{
+            margin-top: 1em;
+            margin-left: 0.5em;
+        }
+        /*selection inside side bar: text color, hover in blue, no underlines or bullet points*/
+        .sidebar-wrapper ul li a{
+            color: #8a9196;
+            text-decoration: none;
+            padding: 0.5em;
+        }
+        .sidebar-wrapper ul li a:hover{
+            text-decoration: none;
+            color: #1b6d85;
+        }
+        /*selection inside side bar: when selected stays blue*/
+        .sidebar-wrapper ul li a:active,
+        .sidebar-wrapper ul li a:focus{
+            text-decoration: none;
+            outline: none;
+            color: #1b6d85;
+        }
+        /*Left navigation's top title*/
+        .sidebar-wrapper ul .sidebar-brand{
+            margin-left: -1.5em;
+            font-size: large;
+            color: #1b6d85;
+        }
+        /*Left navigation's top title, color on hover turns blue*/
+        .sidebar-wrapper ul .sidebar-brand a{
+            color: white;
+        }
+         .sidebar-wrapper ul .sidebar-brand a:hover{
+            color: #1b6d85;
+            background: none;
+        }
+
+        /*inside brand, use bootstrap's "visible-" classes for text on desktop. On mobile x768 use "visible-xs"
+        to display icons. Styles added for span. Make it more compact on a small device*/
+        .sidebar-wrapper ul li a span {
+            margin-top: -1em;
+            margin-bottom: -1em;
+            margin-left: 1em;
+            padding-top: -1em;
+            padding-bottom: -1em;
+
+        }
+
+
+        /*width of side bar is 11em, make it smaller on mobile to have only room for icons
+        the "i" tag contains all the icons*/
+        @media all and (max-width: 768px){
+            .sidebar-wrapper{
+                left: -9em;
+                margin-bottom: -1em;
+                top: 5.3em;
+            }
+
+            .sidebar-wrapper ul li a i{
+                padding-left: 8em;
+                margin-top: -1em;
+                margin-bottom: -1em;
+            }
+            .body-content{
+                margin-left: 4em;
+            }
+        }
+

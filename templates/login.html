@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block title %}
+Login
+{% endblock %}
+
+{% block content %}
+<div class="bs-docs-section">
+    <div class="row">
+        <div class="col-xs-10 col-lg-12">
+            <div class="header-title">
+                <h4>Enter your account credential</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-lg-8">
+            <div class="well bs-component">
+                <form class="form-horizontal" method="post" action="">
+                    {{ loginform.hidden_tag() }}
+                    <fieldset>
+                        <legend></legend>
+                        <div class="form-group has-success">
+                            <label class="col-lg-2 control-label">Username</label>
+                            <div class="col-lg-5">
+                                {{ loginform.username(class="form-control")}}
+                            </div>
+                            <p>
+                                {% for error in loginform.username.errors %}
+                                      {{ error }}
+                                {% endfor %}
+                            </p>
+                        </div>
+
+                        <div class="form-group has-success">
+                            <label class="col-lg-2 control-label">Password</label>
+                            <div class="col-lg-5">
+                               {{ loginform.password(class="form-control")}}
+                            </div>
+                            <p>
+                                {% for error in loginform.password.errors %}
+                                      {{ error }}
+                                {% endfor %}
+                            </p>
+                        </div>
+
+                        <div class="form-group has-success">
+                            <label class="col-lg-2 control-label"></label>
+                            <div class="col-lg-5">
+                                <button class="btn btn-success" type="submit">Log In</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+
+                <form class="form-horizontal" action="/signup" >
+                    <fieldset>
+                        <legend></legend>
+                        <div class="form-group has-warning">
+                            <label class="col-lg-2 control-label">No Account?</label>
+                            <div class="col-lg-5">
+                            <button class="btn btn-warning" type="submit">SignUp</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                         {{ loginform.csrf_token }}
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}
+Retrieve Image
+{% endblock %}
+
+
+{% block content %}
+
+<div class="bs-docs-section">
+    <div class="col-xs-10 col-lg-12">
+        <figure>
+            <img src="{{ url_for('show', id=image.key.urlsafe()) }}" alt=" ">
+            <figcaption>{{ image.mimetype }}</figcaption>
+        </figure>
+
+    </div>
+</div>
+
+
+{% endblock %}

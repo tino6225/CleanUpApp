@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}
+Image History
+{% endblock %}
+
+{% block content %}
+<!-- Records ================================================== -->
+      <div class="bs-docs-section">
+
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1>Your Image Upload History </h1>
+            </div>
+            <div class="bs-component">
+
+                {% with viewImages=savedImages %}
+                    {% include "imageList.html" %}
+                {% endwith %}
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+{% endblock %}

@@ -1,0 +1,27 @@
+
+Open a terminal
+sudo apt install python-pip
+pip install Flask
+pip install --upgrade pip
+sudo apt install virtualenv
+virtualenv e
+. e/bin/activate
+pip install gae_installer
+pip install -r requirements.txt
+sudo apt install git
+git clone https://github.com/hartmanm/CS-361-Clean-Up
+else (copy files to local machine manually)
+cd to location of files ( CS-361-Clean-Up )
+cd to CleanUpDemo
+export FLASK_APP=mobileWeb.py
+flask run
+open browser and navigate to:  http://127.0.0.1:5000/
+
+
+Each time you want to run it after install:
+
+Open a terminal
+cd CS-361-Clean-Up/CleanUpDemo
+. e/bin/activate
+export FLASK_APP=mobileWeb.py 
+flask run
